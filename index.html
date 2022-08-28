@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="doSum(); return false">
+    
+        num1: <input type="number" id="num1">
+        <br>
+        num2: <input type="number" id="num2">
+        <br>
+        <br>
+        <button type="submit">SUM</button>
+       
+        
+
+        <h4 id="result"></h4>
+
+
+
+    </form>
+    <form onsubmit="doSubtract(); return false">
+
+        <button type="submit">SUBTRACT</button>
+        <h4 id="result2"></h4>
+    
+
+    </form>
+
+    <form onsubmit="doMultiply(); return false">
+    <button type="submit">MULTIPLY</button>
+    <h4 id="result3"></h4>
+    </form>
+
+    <form onsubmit="doDivide(); return false">
+        <button type="submit">DIVIDE</button>
+        <h4 id="result4"></h4>
+        </form>
+    
+    <script>
+        function doSum(){
+
+     let num1=+document.querySelector("#num1").value;
+     let num2=+document.querySelector("#num2").value;
+     let result=num1+num2;
+
+     console.log("result is",result);
+
+    document.querySelector("#result").innerHTML=result;
+
+        }
+        function doSubtract(){
+
+let num1=document.querySelector("#num1").value;
+let num2=document.querySelector("#num2").value;
+let result=num1-num2;
+
+console.log("result is",result);
+
+document.querySelector("#result2").innerHTML=result;
+
+   }
+
+   function doMultiply(){
+
+    let num1=document.querySelector("#num1").value;
+    let num2=document.querySelector("#num2").value;
+    let result=num1*num2;
+
+    console.log("result is",result);
+
+document.querySelector("#result3").innerHTML=result;
+
+   }
+
+   function doDivide(){
+
+let num1=document.querySelector("#num1").value;
+let num2=document.querySelector("#num2").value;
+
+let result=num1/num2;
+
+console.log("result is",result);
+
+document.querySelector("#result4").innerHTML=result;
+
+
+   }
+
+
+
+    </script>
+</body>
+</html>
